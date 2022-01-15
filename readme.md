@@ -3,8 +3,8 @@
 ### Deploy contract
 brownie run scripts/deploy_NFTonChain.py --network rinkeby
 
-#### Example of minted sword
-https://testnets.opensea.io/assets/0x16F2418Fe011575a5B8f14A2DCeE83A2CF0035d5/0
+#### Example of minted NFT
+https://testnets.opensea.io/assets/0x9C5b4F4a8746B0E4379F252c019D8FeF15B2ff20/0
 
 
 ### How to store image data in tokenURI on chain?
