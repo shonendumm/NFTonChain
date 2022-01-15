@@ -5,11 +5,12 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "./Base64.sol";
 
-contract SwordOnChain2 is ERC721 {
+contract NFTonChain is ERC721 {
     uint256 public tokenCounter;
+    // we map and store each token's SVG so that we can retrieve them later when tokenURI is called
     mapping(uint256 => string) public tokenIdtoSVG;
 
-    constructor() ERC721("Sword via file", "SWOD") {
+    constructor() ERC721("NFT on Chain", "NOC") {
         // initialize tokenCounter to 0, for token id
         tokenCounter = 0;
     }
@@ -30,12 +31,13 @@ contract SwordOnChain2 is ERC721 {
         return tokenIdtoSVG[_tokenId];
     }
 
+
     function tokenURI(uint256 tokenId) override(ERC721) public view returns (string memory) {
         string memory svg = getImageSVG(tokenId);
         string memory json = Base64.encode(
             bytes(string(
                 abi.encodePacked(
-                    '{"name": ', '"Sword via file",',
+                    '{"name": ', '"Example NFT",',
                     '"image_data": "',svg,'"}' 
                 )
             ))
