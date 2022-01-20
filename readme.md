@@ -1,11 +1,19 @@
 
 
 ### Deploy contract
-brownie run scripts/deploy_NFTonChain.py --network rinkeby
+If passing svg over:
+`brownie run scripts/deploy_NFTonChain.py --network rinkeby`
+
+If passing metadata over:
+`brownie run scripts/deploy_NFTonChain2.py --network rinkeby`
+
 
 #### Example of minted NFT
+SVG on chain:
 https://testnets.opensea.io/assets/0x9C5b4F4a8746B0E4379F252c019D8FeF15B2ff20/0
 
+metadata on chain:
+https://testnets.opensea.io/assets/0xB965bbE95E020eb8192A5ed5Fc5735987DCf7e15/0 
 
 ### How to store image data in tokenURI on chain?
 
